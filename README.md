@@ -4,11 +4,11 @@
 
 ### **Authors**
 
-Szandra A. Peter¹, Travis Gallo², Jennifer Mullinax², Amira Roess³, Gabriela Palomo-Munoz²˒⁴, Taylor Anderson¹
-1.	Department of Geography and Geoinformation Science, College of Science, George Mason University, Fairfax, VA, USA
-2. 	Department of Environmental Science and Technology, College of Agriculture and Natural Resources, University of Maryland, College Park, MD, USA
-4.	Department of Global and Community Health and Epidemiology, College of Public Health, George Mason University, Fairfax, VA, USA 
-5.	Biology Department, Universidad del Valle de Guatemala, Guatemala (current affiliation)
+Szandra A. Péter¹, Travis Gallo², Jennifer Mullinax², Amira Roess³, Gabriela Palomo-Munoz²˒⁴, Taylor Anderson¹
+1.	Department of Geography and Geoinformation Science, George Mason University, Fairfax, VA, 22030, USA
+2. 	Department of Environmental Science and Technology, University of Maryland, College Park, MD, 20742, USA
+3.	Department of Global and Community Health, George Mason University, Fairfax, VA, 22030, USA 
+4.	Biology Department, Universidad del Valle de Guatemala, Guatemala City, Guatemala (current affiliation)
 
 ---
 
@@ -22,25 +22,25 @@ Szandra A. Peter¹, Travis Gallo², Jennifer Mullinax², Amira Roess³, Gabriela
 - `Scripts/GEE_temperature_download.ipynb` 
   Downloades the publicly available daytime MODIS Land Surface Temperature (LST) data using Google Earth Engine. 
 
-- `Scripts/fig2.ipynb` 
-  Computes mean popularity by hour of deer and humans across different landscape types. The resulting data were used to produce Figure 2.
+- `Scripts/figure3.ipynb` 
+  Computes mean popularity by hour of deer and humans across different landscape types. The resulting data were used to produce Figure 3.
 
-- `Scripts/fig3.ipynb` 
-  Computes seasonal mean popularity by hour of deer and humans across different landscape types. The resulting data were used to produce Figure 3.
+- `Scripts/figure4.ipynb` 
+  Computes seasonal mean popularity by hour of deer and humans across different landscape types. The resulting data were used to produce Figure 4.
 
-#### **R scripts**
+#### **R Scripts**
 
 - `Scripts/package_load.R` 
   Loads needed libraries. Source this script at the beginning to ensure all necessary packages and functions are available.
 
 - `Scripts/2025-03-24_data_processing_hex.R` 
-  Processes landscape-level variables for the hexagons. Produces `2025-03-24_full_data.rds` which is read into `2025-03-24_human_deer_combined_nb_lasso.R` and `2025-03-24_nb_offset_deer_nimble.R`. Note that this script requires several spatial datasets that are publicly available, but we do not provide in this repository. Sources are indicated in the script and/or the manuscript.
+  Processes landscape-level variables for the hexagons. Produces `2025-03-24_full_data.rds` which is read into `2025-03-24_human_deer_combined_nb_lasso_hex.R` and `2025-03-24_nb_offset_deer_nimble_hex.R`. Note that this script requires several spatial datasets that are publicly available, but we do not provide in this repository. Sources are indicated in the script and/or the manuscript.
 
-- `Scripts/2025-03-24_human_deer_combined_nb_lasso.R` 
+- `Scripts/2025-03-24_human_deer_combined_nb_lasso_hex.R` 
   Independent negative binomial models for deer and humans. Produces `2025-03-24_CombinedAnalysis_DeerModelResults.rds` and `2025-03-24_CombinedAnalysis_HumanModelResults.rds`.
    
-- `Scripts/2025-03-24_nb_offset_deer_nimble.R` 
-  Deer-only negative binomial model using the same independent variables as `2025-03-24_human_deer_combined_nb_lasso.R`, with human commercial activity included as an additional variable. Produces `2025-03-24_model_results_nb_lasso.rds`.
+- `Scripts/2025-03-24_nb_offset_deer_nimble_hex.R` 
+  Deer-only negative binomial model using the same independent variables as `2025-03-24_human_deer_combined_nb_lasso_hex.R`, with human commercial activity included as an additional variable. Produces `2025-03-24_model_results_nb_lasso.rds`.
 
 ---
 
@@ -82,7 +82,7 @@ Szandra A. Peter¹, Travis Gallo², Jennifer Mullinax², Amira Roess³, Gabriela
   Spatial data of the hexagonal tessellation used in the study. Read into `movement_buildings_poptotal.ipynb`.
 
 - `Data/2025-03-24_full_data.rds`  
-  Processed data used in the negative binomial models. Read into `2025-03-24_human_deer_combined_nb_lasso.R` and `2025-03-24_nb_offset_deer_nimble.R`.
+  Processed data used in the negative binomial models. Read into `2025-03-24_human_deer_combined_nb_lasso_hex.R` and `2025-03-24_nb_offset_deer_nimble_hex.R`.
   
 ---
 
@@ -92,4 +92,4 @@ Szandra A. Peter¹, Travis Gallo², Jennifer Mullinax², Amira Roess³, Gabriela
 ---
 
 ### **Reference**
-Roden-Reynolds, P., Kent, C. M., Li, A. Y., & Mullinax, J. M. Patterns of white-tailed deer movements in suburban Maryland: implications for zoonotic disease mitigation. *Urban Ecosyst* **25**, 1925–1938 (2022).
+Roden-Reynolds, P., Kent, C. M., Li, A. Y., & Mullinax, J. M. Patterns of white-tailed deer movements in suburban Maryland: implications for zoonotic disease mitigation. *Urban Ecosyst.* **25**, 1925–1938 (2022).
