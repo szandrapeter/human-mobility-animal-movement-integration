@@ -1,7 +1,5 @@
 ## **Jupyter Notebooks and R scripts used to integrate human mobility and animal movement data**
 
----
-
 ### **Citation**
 
 Péter, S. A. et al. Integrating human mobility and animal movement data reveals complex space-use between humans and white-tailed deer in urban environments. *Sci. Rep.* **15**, 18588 (2025). https://doi.org/10.1038/s41598-025-03577-5.
